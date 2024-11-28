@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float groundDistance;
     public LayerMask layerMask;
+    public float kbforce;
+    public float kbCounter;
+    public float kbTotalTime;
+    public bool KnockFromRight;
 
     RaycastHit2D hit;
 
@@ -46,7 +50,22 @@ public class PlayerController : MonoBehaviour
     void Movement()
     {
         inputs = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new UnityEngine.Vector2(inputs * currentSpeed, rb.velocity.y);
+        if(kbCounter <= 0)
+        {
+            rb.velocity = new UnityEngine.Vector2(inputs * currentSpeed, rb.velocity.y);
+        }
+        else
+        {
+            if(KnockFromRight == true)
+            {
+                rb.velocity = new Vector2(-kbforce, kbforce);
+            }
+            if(KnockFromRight == false)
+            {
+                rb.velocity = new Vector2(kbforce, kbforce);
+            }
+            kbCounter -= Time.deltaTime;
+        }
 
         hit = Physics2D.Raycast(transform.position, -transform.up, groundDistance, layerMask);
         Debug.DrawRay(transform.position, -transform.up * groundDistance, Color.yellow);
@@ -97,4 +116,6 @@ public class PlayerController : MonoBehaviour
             transform.position = startPos;
         }
     }
+
+    
 }

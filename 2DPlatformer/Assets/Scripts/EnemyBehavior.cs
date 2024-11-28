@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool movingToPointA = true;
     private Rigidbody2D rb;
     public Transform player;
+    public PlayerController playerController;
     
     
     // Start is called before the first frame update
@@ -58,5 +59,21 @@ public class EnemyBehavior : MonoBehaviour
     {
         movingToPointA = !movingToPointA;
         target = movingToPointA ? pointA.position : pointB.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            playerController.kbCounter = playerController.kbTotalTime;
+            if(collision.transform.position.x <= transform.position.x)
+            {
+                playerController.KnockFromRight = true;
+            }
+            if(collision.transform.position.x > transform.position.x)
+            {
+                playerController.KnockFromRight = false;
+            }
+        }
     }
 }
