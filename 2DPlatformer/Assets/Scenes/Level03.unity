@@ -7634,6 +7634,26 @@ PrefabInstance:
       propertyPath: extraJumpValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1898
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461460103277065941, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

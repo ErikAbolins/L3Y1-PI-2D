@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
 {
     public Slider volumeSlider;
     public AudioMixer mixer;
+
     public void SetVolume()
     {
         mixer.SetFloat("volume", volumeSlider.value);

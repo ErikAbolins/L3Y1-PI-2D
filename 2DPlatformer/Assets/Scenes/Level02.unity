@@ -4571,6 +4571,34 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550026883780748198, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461460103277065941, guid: 68b19763a6d338b40bf1740d3dda533c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4651,6 +4679,10 @@ PrefabInstance:
     - target: {fileID: 4051892173944177097, guid: 1a7e9935b901fb2488c240d03166714b, type: 3}
       propertyPath: m_Name
       value: Crossfade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051892173944177097, guid: 1a7e9935b901fb2488c240d03166714b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9051971957458504736, guid: 1a7e9935b901fb2488c240d03166714b, type: 3}
       propertyPath: m_Pivot.x

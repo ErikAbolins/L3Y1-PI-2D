@@ -7,13 +7,18 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     public static bool gameIsPaused;
-    
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             gameIsPaused = !gameIsPaused;
             Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && gameIsPaused)
+        {
+            Resume();
         }
     }
     

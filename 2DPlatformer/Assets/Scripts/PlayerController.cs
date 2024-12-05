@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed = 10f;
     public float moveSpeed;
     public float jumpForce;
-    float inputs;
+    public float inputs;
     public Rigidbody2D rb;
     public float groundDistance;
     public LayerMask layerMask;
@@ -25,9 +25,8 @@ public class PlayerController : MonoBehaviour
     public float kbCounter;
     public float kbTotalTime;
     public bool KnockFromRight;
-
+    public Animator animator;
     RaycastHit2D hit;
-
     Vector3 startPos;
 
     // Start is called before the first frame update
@@ -52,6 +51,7 @@ public class PlayerController : MonoBehaviour
         inputs = Input.GetAxisRaw("Horizontal");
         if(kbCounter <= 0)
         {
+            animator.SetFloat("Speed", Mathf.Abs(inputs));
             rb.velocity = new UnityEngine.Vector2(inputs * currentSpeed, rb.velocity.y);
         }
         else
@@ -116,6 +116,5 @@ public class PlayerController : MonoBehaviour
             transform.position = startPos;
         }
     }
-
     
 }
